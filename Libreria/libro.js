@@ -32,6 +32,9 @@ class Libro{
     }
     
 //////////////////SETTERSS////////////////////////
+    setIsbn(isbn){
+        this.isbn=isbn;
+    }
     setTitulo(titulo){
         this.titulo=titulo;
     };
