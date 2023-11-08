@@ -18,16 +18,27 @@ class Libreria{
         }            
         
     }
-    buscarPorId(isbn){
-        
-    }
-    buscarPorTitulo(titulo){
-
-    }
-    filtrarPorAutor(Autor){
-
+    buscarPorId(isbn) {
+        let libro = this.libros.find(libro => libro.isbn === isbn);
+        if (libro) {
+            return libro.toString();
+        }else{
+             return "No se ha encontrado el libro";
+        }
     }
     
+    buscarPorTitulo(titulo){
+        let libro = this.libros.find(libro => libro.titulo === titulo);
+        if (libro) {
+            return libro.toString();
+        }else{
+             return "No se ha encontrado el libro";
+        }
+    }
+    filtrarPorAutor(Autor){
+        let autor = this.libros.filter(Autor=> Autor===li)
+    }
+
 
 }
     

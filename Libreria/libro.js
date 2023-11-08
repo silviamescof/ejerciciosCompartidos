@@ -15,7 +15,7 @@ class Libro{
         
         return this.stock>0 ? true : false;
     }
-    getTituo(){
+    getTitulo(){
         return this.ISBN;
     }
     getAutor(){
@@ -47,5 +47,8 @@ class Libro{
     setStock(stock){
         this.stock=stock<0 ? 0: stock;
     }
-
+    toString() {
+        return `Título: ${this.titulo}, Autor: ${this.autor}, Precio: ${this.precio}, Género: ${this.genero}, Stock: ${this.stock}`;
+    }
+    
 }
