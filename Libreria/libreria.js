@@ -6,11 +6,23 @@ class Libreria{
 
     agregarLibro(libro){
 
-        let existe=this.libros.find(param=>param.isbn==libro.isbn);
-        if(!existe){
-            this.libros.push(libro);
-        }  
-    }
+        let isbn=Math.floor(Math.random()+9999999999999+1);
+
+        let existe=this.libros.find(param=>param.isbn==isbn);
+
+        while(existe!=undefined){
+            
+            isbn=Math.floor(Math.random()+9999999999999+1);
+
+            existe=this.libros.find(param=>param.isbn===isbn);
+        };
+
+        libro.setIsbn(isbn);
+           
+        this.libros.push(libro);
+
+        } ;
+    
     eliminar(isbn){
         let posicion = (this.libros.findIndex(isbn));
         if(posicion==0){
@@ -19,6 +31,17 @@ class Libreria{
         
     }
     buscarPorId(isbn){
+
+    };
+
+    filtrarPorGenero(genero){
+
+        let arrayGenero=this.libros.filter(param=>param.genero==genero);
+
+        return arrayGenero;
+    };
+    comprarLibros(array){
+
 
     };
 };
