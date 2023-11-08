@@ -51,7 +51,7 @@ class Libreria{
 
 
     };
-};
+
 
     
     buscarPorTitulo(titulo){
@@ -61,7 +61,7 @@ class Libreria{
         }else{
              return "No se ha encontrado el libro";
         }
-    }
+    };
     filtrarPorAutor(Autor){
         let autor = this.libros.filter(Autor=> Autor===li)
     }
